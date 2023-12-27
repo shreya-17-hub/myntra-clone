@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <Style>
+    .bag-btn, .item{
+  background-color: rgb(142, 231, 142);
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 30px;
+}
+
+.wishlist{
+  border-radius: 8px;
+  padding: 8px 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+  </Style>
+  <title>Document</title>
+</head>
+<body>
+  <button class="bag-btn" onclick= "cartquantity = cartquantity +1; 
+  document.querySelector('#cart').innerHTML = `Your bag has ${cartquantity} items`;" >Add to bag</button>
+  
+  <button class="wishlist"  onclick="wishListItems = wishListItems +3 ;document.getElementById('wishlist').innerHTML=`Your wishlist has ${wishListItems} items`; ">Move to Wishlist</button>
+  
+  <button class="item" onclick="alert('Item has been added to bag')">Add 1+1 sale item</button>
+
+  <h2 id="cart"></h2>
+
+  <h3 id="wishlist"></h3>
+  
+
+<script>
+  let cartquantity= 0;
+  document.querySelector('#cart').innerHTML = 'Your bag has ' + cartquantity +' items'; 
+
+  let wishListItems=0;
+  document.getElementById('wishlist').innerHTML=`Your wishlist has ${wishListItems} items`;
+
+</script>
+
+
+</body>
+</html>
